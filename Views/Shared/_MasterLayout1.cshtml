@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/131e0ec2d1.js" crossorigin="anonymous"></script>\
+</head>
+
+<body>
+    <style>
+        header {
+            padding: 20px;
+        }
+
+        .header__box {
+            position: relative;
+        }
+
+        .seach-box {
+            position: relative;
+            height: 100%;
+        }
+
+            .seach-box input {
+                width: 280px;
+                padding: 0 25px;
+            }
+
+
+
+        #search_icon {
+            position: absolute;
+            z-index: 3;
+            top: 6px;
+            left: 6px;
+            color: black;
+        }
+
+
+        #search-box-title {
+            position: absolute;
+            height: 100%;
+            top: 0;
+            right: 20px;
+            color: black;
+            text-decoration: none;
+        }
+
+            #search-box-title a {
+                color: black;
+            }
+
+            #search-box-title::before {
+                position: absolute;
+                width: 0.5px;
+                height: 100%;
+                background: red;
+                content: " ";
+                bottom: 0;
+                left: -10px;
+            }
+
+        /* HEADER ICON */
+
+        .house-icon, .astra-icon, .taikhoan-icon, .shopping-cart {
+            padding: 0 10px;
+        }
+
+            .house-icon a, .astra-icon a, .taikhoan-icon a, .shopping-cart a {
+                padding: 0 2px;
+                color: black;
+            }
+    </style>
+
+
+    <div class="container">
+        <header>
+               <div class="logo">
+                   <img src="~/Content/images/images/ee828743c9afa9792cf20d75995e134e.png" />
+               </div>
+                <div class="d-flex justify-content-between header__box">
+                    <div class="seach-box">
+                        <a href="##">
+                            <i id="search_icon" class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                        <input type="search" placeholder="Giao Nhanh 2 gio" />
+
+                        <a class="d-flex" id="search-box-title" href="##">
+                            Tim Kiem
+                        </a>
+                    </div>
+
+                    <div class="d-flex header__icon_p">
+                        <div class="d-flex house-icon">
+                            <a href="##">
+                                <i class="fa-solid fa-house"></i>
+                            </a>
+
+                            <p> Trang Chu </p>
+                        </div>
+
+                        <div class="d-flex astra-icon">
+                            <a href="##">
+                                <i class="fa-solid fa-user-astronaut"></i>
+                            </a>
+
+                            <p> Astra </p>
+                        </div>
+
+                        <div class="d-flex taikhoan-icon">
+                            <a href="##">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </a>
+                            <p> Tai Khoan </p>
+                        </div>
+
+                        <div class="shopping-cart">
+                            <a href="##">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <nav class="d-flex justify-content-between">
+                    <div class="nav-title">
+                        <a href="##"> khỏe đẹp  </a>
+                        <a href="##"> Nhà cửa   </a>
+                        <a href="##"> Sách </a>
+                        <a href="##"> Thể thao </a>
+                        <a href="##"> Trái cây </a>
+                        <a href="##"> Thịt , trứng </a>
+                        <a href="##"> rau củ quả </a>
+                        <a href="##"> Sửa bơ phô mai </a>
+                        <a href="##"> Hải sản </a>
+                        <a href="##"> Gạo , Mì ăn liền </a>
+                    </div>
+
+                    <div class="Diachi">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Giao đến: 79 Bàu Cát phường 14 Quận Tân Bình HCM
+                    </div>
+                </nav>
+</header>
+                @RenderBody()
+    </div>
+
+
+</body>
+</html>
